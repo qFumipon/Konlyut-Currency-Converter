@@ -1,0 +1,18 @@
+<resources>
+    <style name="Theme.Currency" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowBackground">#F4F7F8</item>
+        <item name="android:colorAccent">#006B58</item>
+    </style>
+    <style name="Theme.Currency.Popup" parent="Theme.Currency">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">94%</item>
+    </style>
+</resources>

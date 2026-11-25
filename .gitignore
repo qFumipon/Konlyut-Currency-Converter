@@ -1,0 +1,47 @@
+# Android Studio, SDK, local machine
+.idea/
+.gradle/
+.kotlin/
+local.properties
+gradle-local-env.bat
+dev-env.ps1
+*.iml
+*.hprof
+
+# Build outputs and temporary files
+**/build/
+*.apk
+*.aab
+*.apks
+*.zip
+*.log
+*.tmp
+*.bak
+backup-*/
+outputs/
+PROGRESS.md
+REPORT-*.md
+VALIDATION.md
+
+# Signing credentials and local secrets
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+*.key
+*.asc
+*.env
+.env*
+keystore.properties
+signing.properties
+secrets.properties
+**/credentials/
+**/secrets/
+
+# User data and caches
+*.preferences_pb
+rates-v1.json
+*.db
+*.db-shm
+*.db-wal

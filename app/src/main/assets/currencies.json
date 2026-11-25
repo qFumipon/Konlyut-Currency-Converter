@@ -1,0 +1,998 @@
+[
+  {
+    "code": "AED",
+    "en": "United Arab Emirates Dirham",
+    "ru": "дирхам ОАЭ",
+    "country": "AE"
+  },
+  {
+    "code": "AFN",
+    "en": "Afghan Afghani",
+    "ru": "афгани",
+    "country": "AF"
+  },
+  {
+    "code": "ALL",
+    "en": "Albanian Lek",
+    "ru": "албанский лек",
+    "country": "AL"
+  },
+  {
+    "code": "AMD",
+    "en": "Armenian Dram",
+    "ru": "армянский драм",
+    "country": "AM"
+  },
+  {
+    "code": "ANG",
+    "en": "Netherlands Antillean Guilder",
+    "ru": "нидерландский антильский гульден",
+    "country": "CW"
+  },
+  {
+    "code": "AOA",
+    "en": "Angolan Kwanza",
+    "ru": "ангольская кванза",
+    "country": "AO"
+  },
+  {
+    "code": "ARS",
+    "en": "Argentine Peso",
+    "ru": "аргентинский песо",
+    "country": "AR"
+  },
+  {
+    "code": "AUD",
+    "en": "Australian Dollar",
+    "ru": "австралийский доллар",
+    "country": "AU"
+  },
+  {
+    "code": "AWG",
+    "en": "Aruban Florin",
+    "ru": "арубанский флорин",
+    "country": "AW"
+  },
+  {
+    "code": "AZN",
+    "en": "Azerbaijani Manat",
+    "ru": "азербайджанский манат",
+    "country": "AZ"
+  },
+  {
+    "code": "BAM",
+    "en": "Bosnia-Herzegovina Convertible Mark",
+    "ru": "конвертируемая марка Боснии и Герцеговины",
+    "country": "BA"
+  },
+  {
+    "code": "BBD",
+    "en": "Barbadian Dollar",
+    "ru": "барбадосский доллар",
+    "country": "BB"
+  },
+  {
+    "code": "BDT",
+    "en": "Bangladeshi Taka",
+    "ru": "бангладешская така",
+    "country": "BD"
+  },
+  {
+    "code": "BGN",
+    "en": "Bulgarian Lev",
+    "ru": "болгарский лев",
+    "country": ""
+  },
+  {
+    "code": "BHD",
+    "en": "Bahraini Dinar",
+    "ru": "бахрейнский динар",
+    "country": "BH"
+  },
+  {
+    "code": "BIF",
+    "en": "Burundian Franc",
+    "ru": "бурундийский франк",
+    "country": "BI"
+  },
+  {
+    "code": "BMD",
+    "en": "Bermudan Dollar",
+    "ru": "бермудский доллар",
+    "country": "BM"
+  },
+  {
+    "code": "BND",
+    "en": "Brunei Dollar",
+    "ru": "брунейский доллар",
+    "country": "BN"
+  },
+  {
+    "code": "BOB",
+    "en": "Bolivian Boliviano",
+    "ru": "боливийский боливиано",
+    "country": "BO"
+  },
+  {
+    "code": "BRL",
+    "en": "Brazilian Real",
+    "ru": "бразильский реал",
+    "country": "BR"
+  },
+  {
+    "code": "BSD",
+    "en": "Bahamian Dollar",
+    "ru": "багамский доллар",
+    "country": "BS"
+  },
+  {
+    "code": "BTN",
+    "en": "Bhutanese Ngultrum",
+    "ru": "бутанский нгултрум",
+    "country": "BT"
+  },
+  {
+    "code": "BWP",
+    "en": "Botswanan Pula",
+    "ru": "ботсванская пула",
+    "country": "BW"
+  },
+  {
+    "code": "BYN",
+    "en": "Belarusian Ruble",
+    "ru": "белорусский рубль",
+    "country": "BY"
+  },
+  {
+    "code": "BZD",
+    "en": "Belize Dollar",
+    "ru": "белизский доллар",
+    "country": "BZ"
+  },
+  {
+    "code": "CAD",
+    "en": "Canadian Dollar",
+    "ru": "канадский доллар",
+    "country": "CA"
+  },
+  {
+    "code": "CDF",
+    "en": "Congolese Franc",
+    "ru": "конголезский франк",
+    "country": "CD"
+  },
+  {
+    "code": "CHF",
+    "en": "Swiss Franc",
+    "ru": "швейцарский франк",
+    "country": "CH"
+  },
+  {
+    "code": "CLF",
+    "en": "Chilean Unit of Account (UF)",
+    "ru": "Условная расчетная единица Чили",
+    "country": ""
+  },
+  {
+    "code": "CLP",
+    "en": "Chilean Peso",
+    "ru": "чилийский песо",
+    "country": "CL"
+  },
+  {
+    "code": "CNH",
+    "en": "Chinese yuan (offshore)",
+    "ru": "Китайский юань (офшорный)",
+    "country": "CN"
+  },
+  {
+    "code": "CNY",
+    "en": "Chinese Yuan",
+    "ru": "китайский юань",
+    "country": "CN"
+  },
+  {
+    "code": "COP",
+    "en": "Colombian Peso",
+    "ru": "колумбийский песо",
+    "country": "CO"
+  },
+  {
+    "code": "CRC",
+    "en": "Costa Rican Colón",
+    "ru": "костариканский колон",
+    "country": "CR"
+  },
+  {
+    "code": "CUP",
+    "en": "Cuban Peso",
+    "ru": "кубинский песо",
+    "country": "CU"
+  },
+  {
+    "code": "CVE",
+    "en": "Cape Verdean Escudo",
+    "ru": "эскудо Кабо-Верде",
+    "country": "CV"
+  },
+  {
+    "code": "CZK",
+    "en": "Czech Koruna",
+    "ru": "чешская крона",
+    "country": "CZ"
+  },
+  {
+    "code": "DJF",
+    "en": "Djiboutian Franc",
+    "ru": "франк Джибути",
+    "country": "DJ"
+  },
+  {
+    "code": "DKK",
+    "en": "Danish Krone",
+    "ru": "датская крона",
+    "country": "DK"
+  },
+  {
+    "code": "DOP",
+    "en": "Dominican Peso",
+    "ru": "доминиканский песо",
+    "country": "DO"
+  },
+  {
+    "code": "DZD",
+    "en": "Algerian Dinar",
+    "ru": "алжирский динар",
+    "country": "DZ"
+  },
+  {
+    "code": "EGP",
+    "en": "Egyptian Pound",
+    "ru": "египетский фунт",
+    "country": "EG"
+  },
+  {
+    "code": "ERN",
+    "en": "Eritrean Nakfa",
+    "ru": "эритрейская накфа",
+    "country": "ER"
+  },
+  {
+    "code": "ETB",
+    "en": "Ethiopian Birr",
+    "ru": "эфиопский быр",
+    "country": "ET"
+  },
+  {
+    "code": "EUR",
+    "en": "Euro",
+    "ru": "евро",
+    "country": "EU"
+  },
+  {
+    "code": "FJD",
+    "en": "Fijian Dollar",
+    "ru": "доллар Фиджи",
+    "country": "FJ"
+  },
+  {
+    "code": "FKP",
+    "en": "Falkland Islands Pound",
+    "ru": "фунт Фолклендских островов",
+    "country": "FK"
+  },
+  {
+    "code": "FOK",
+    "en": "Faroese króna",
+    "ru": "Фарерская крона",
+    "country": "FO"
+  },
+  {
+    "code": "GBP",
+    "en": "British Pound",
+    "ru": "британский фунт стерлингов",
+    "country": "GB"
+  },
+  {
+    "code": "GEL",
+    "en": "Georgian Lari",
+    "ru": "грузинский лари",
+    "country": "GE"
+  },
+  {
+    "code": "GGP",
+    "en": "Guernsey pound",
+    "ru": "Гернсийский фунт",
+    "country": "GG"
+  },
+  {
+    "code": "GHS",
+    "en": "Ghanaian Cedi",
+    "ru": "ганский седи",
+    "country": "GH"
+  },
+  {
+    "code": "GIP",
+    "en": "Gibraltar Pound",
+    "ru": "гибралтарский фунт",
+    "country": "GI"
+  },
+  {
+    "code": "GMD",
+    "en": "Gambian Dalasi",
+    "ru": "гамбийский даласи",
+    "country": "GM"
+  },
+  {
+    "code": "GNF",
+    "en": "Guinean Franc",
+    "ru": "гвинейский франк",
+    "country": "GN"
+  },
+  {
+    "code": "GTQ",
+    "en": "Guatemalan Quetzal",
+    "ru": "гватемальский кетсаль",
+    "country": "GT"
+  },
+  {
+    "code": "GYD",
+    "en": "Guyanaese Dollar",
+    "ru": "гайанский доллар",
+    "country": "GY"
+  },
+  {
+    "code": "HKD",
+    "en": "Hong Kong Dollar",
+    "ru": "гонконгский доллар",
+    "country": "HK"
+  },
+  {
+    "code": "HNL",
+    "en": "Honduran Lempira",
+    "ru": "гондурасская лемпира",
+    "country": "HN"
+  },
+  {
+    "code": "HRK",
+    "en": "Croatian Kuna",
+    "ru": "хорватская куна",
+    "country": ""
+  },
+  {
+    "code": "HTG",
+    "en": "Haitian Gourde",
+    "ru": "гаитянский гурд",
+    "country": "HT"
+  },
+  {
+    "code": "HUF",
+    "en": "Hungarian Forint",
+    "ru": "венгерский форинт",
+    "country": "HU"
+  },
+  {
+    "code": "IDR",
+    "en": "Indonesian Rupiah",
+    "ru": "индонезийская рупия",
+    "country": "ID"
+  },
+  {
+    "code": "ILS",
+    "en": "Israeli New Shekel",
+    "ru": "новый израильский шекель",
+    "country": "IL"
+  },
+  {
+    "code": "IMP",
+    "en": "Manx pound",
+    "ru": "Фунт острова Мэн",
+    "country": "IM"
+  },
+  {
+    "code": "INR",
+    "en": "Indian Rupee",
+    "ru": "индийская рупия",
+    "country": "IN"
+  },
+  {
+    "code": "IQD",
+    "en": "Iraqi Dinar",
+    "ru": "иракский динар",
+    "country": "IQ"
+  },
+  {
+    "code": "IRR",
+    "en": "Iranian Rial",
+    "ru": "иранский риал",
+    "country": "IR"
+  },
+  {
+    "code": "ISK",
+    "en": "Icelandic Króna",
+    "ru": "исландская крона",
+    "country": "IS"
+  },
+  {
+    "code": "JEP",
+    "en": "Jersey pound",
+    "ru": "Джерсийский фунт",
+    "country": "JE"
+  },
+  {
+    "code": "JMD",
+    "en": "Jamaican Dollar",
+    "ru": "ямайский доллар",
+    "country": "JM"
+  },
+  {
+    "code": "JOD",
+    "en": "Jordanian Dinar",
+    "ru": "иорданский динар",
+    "country": "JO"
+  },
+  {
+    "code": "JPY",
+    "en": "Japanese Yen",
+    "ru": "японская иена",
+    "country": "JP"
+  },
+  {
+    "code": "KES",
+    "en": "Kenyan Shilling",
+    "ru": "кенийский шиллинг",
+    "country": "KE"
+  },
+  {
+    "code": "KGS",
+    "en": "Kyrgystani Som",
+    "ru": "киргизский сом",
+    "country": "KG"
+  },
+  {
+    "code": "KHR",
+    "en": "Cambodian Riel",
+    "ru": "камбоджийский риель",
+    "country": "KH"
+  },
+  {
+    "code": "KID",
+    "en": "Kiribati dollar",
+    "ru": "Доллар Кирибати",
+    "country": "KI"
+  },
+  {
+    "code": "KMF",
+    "en": "Comorian Franc",
+    "ru": "коморский франк",
+    "country": "KM"
+  },
+  {
+    "code": "KRW",
+    "en": "South Korean Won",
+    "ru": "южнокорейская вона",
+    "country": "KR"
+  },
+  {
+    "code": "KWD",
+    "en": "Kuwaiti Dinar",
+    "ru": "кувейтский динар",
+    "country": "KW"
+  },
+  {
+    "code": "KYD",
+    "en": "Cayman Islands Dollar",
+    "ru": "доллар Островов Кайман",
+    "country": "KY"
+  },
+  {
+    "code": "KZT",
+    "en": "Kazakhstani Tenge",
+    "ru": "казахский тенге",
+    "country": "KZ"
+  },
+  {
+    "code": "LAK",
+    "en": "Laotian Kip",
+    "ru": "лаосский кип",
+    "country": "LA"
+  },
+  {
+    "code": "LBP",
+    "en": "Lebanese Pound",
+    "ru": "ливанский фунт",
+    "country": "LB"
+  },
+  {
+    "code": "LKR",
+    "en": "Sri Lankan Rupee",
+    "ru": "шри-ланкийская рупия",
+    "country": "LK"
+  },
+  {
+    "code": "LRD",
+    "en": "Liberian Dollar",
+    "ru": "либерийский доллар",
+    "country": "LR"
+  },
+  {
+    "code": "LSL",
+    "en": "Lesotho Loti",
+    "ru": "лоти",
+    "country": "LS"
+  },
+  {
+    "code": "LYD",
+    "en": "Libyan Dinar",
+    "ru": "ливийский динар",
+    "country": "LY"
+  },
+  {
+    "code": "MAD",
+    "en": "Moroccan Dirham",
+    "ru": "марокканский дирхам",
+    "country": "EH"
+  },
+  {
+    "code": "MDL",
+    "en": "Moldovan Leu",
+    "ru": "молдавский лей",
+    "country": "MD"
+  },
+  {
+    "code": "MGA",
+    "en": "Malagasy Ariary",
+    "ru": "малагасийский ариари",
+    "country": "MG"
+  },
+  {
+    "code": "MKD",
+    "en": "Macedonian Denar",
+    "ru": "македонский денар",
+    "country": "MK"
+  },
+  {
+    "code": "MMK",
+    "en": "Myanmar Kyat",
+    "ru": "мьянманский кьят",
+    "country": "MM"
+  },
+  {
+    "code": "MNT",
+    "en": "Mongolian Tugrik",
+    "ru": "монгольский тугрик",
+    "country": "MN"
+  },
+  {
+    "code": "MOP",
+    "en": "Macanese Pataca",
+    "ru": "патака Макао",
+    "country": "MO"
+  },
+  {
+    "code": "MRU",
+    "en": "Mauritanian Ouguiya",
+    "ru": "мавританская угия",
+    "country": "MR"
+  },
+  {
+    "code": "MUR",
+    "en": "Mauritian Rupee",
+    "ru": "маврикийская рупия",
+    "country": "MU"
+  },
+  {
+    "code": "MVR",
+    "en": "Maldivian Rufiyaa",
+    "ru": "мальдивская руфия",
+    "country": "MV"
+  },
+  {
+    "code": "MWK",
+    "en": "Malawian Kwacha",
+    "ru": "малавийская квача",
+    "country": "MW"
+  },
+  {
+    "code": "MXN",
+    "en": "Mexican Peso",
+    "ru": "мексиканский песо",
+    "country": "MX"
+  },
+  {
+    "code": "MYR",
+    "en": "Malaysian Ringgit",
+    "ru": "малайзийский ринггит",
+    "country": "MY"
+  },
+  {
+    "code": "MZN",
+    "en": "Mozambican Metical",
+    "ru": "мозамбикский метикал",
+    "country": "MZ"
+  },
+  {
+    "code": "NAD",
+    "en": "Namibian Dollar",
+    "ru": "доллар Намибии",
+    "country": "NA"
+  },
+  {
+    "code": "NGN",
+    "en": "Nigerian Naira",
+    "ru": "нигерийская найра",
+    "country": "NG"
+  },
+  {
+    "code": "NIO",
+    "en": "Nicaraguan Córdoba",
+    "ru": "никарагуанская кордоба",
+    "country": "NI"
+  },
+  {
+    "code": "NOK",
+    "en": "Norwegian Krone",
+    "ru": "норвежская крона",
+    "country": "NO"
+  },
+  {
+    "code": "NPR",
+    "en": "Nepalese Rupee",
+    "ru": "непальская рупия",
+    "country": "NP"
+  },
+  {
+    "code": "NZD",
+    "en": "New Zealand Dollar",
+    "ru": "новозеландский доллар",
+    "country": "NZ"
+  },
+  {
+    "code": "OMR",
+    "en": "Omani Rial",
+    "ru": "оманский риал",
+    "country": "OM"
+  },
+  {
+    "code": "PAB",
+    "en": "Panamanian Balboa",
+    "ru": "панамский бальбоа",
+    "country": "PA"
+  },
+  {
+    "code": "PEN",
+    "en": "Peruvian Sol",
+    "ru": "перуанский соль",
+    "country": "PE"
+  },
+  {
+    "code": "PGK",
+    "en": "Papua New Guinean Kina",
+    "ru": "кина Папуа – Новой Гвинеи",
+    "country": "PG"
+  },
+  {
+    "code": "PHP",
+    "en": "Philippine Peso",
+    "ru": "филиппинский песо",
+    "country": "PH"
+  },
+  {
+    "code": "PKR",
+    "en": "Pakistani Rupee",
+    "ru": "пакистанская рупия",
+    "country": "PK"
+  },
+  {
+    "code": "PLN",
+    "en": "Polish Zloty",
+    "ru": "польский злотый",
+    "country": "PL"
+  },
+  {
+    "code": "PYG",
+    "en": "Paraguayan Guarani",
+    "ru": "парагвайский гуарани",
+    "country": "PY"
+  },
+  {
+    "code": "QAR",
+    "en": "Qatari Riyal",
+    "ru": "катарский риал",
+    "country": "QA"
+  },
+  {
+    "code": "RON",
+    "en": "Romanian Leu",
+    "ru": "румынский лей",
+    "country": "RO"
+  },
+  {
+    "code": "RSD",
+    "en": "Serbian Dinar",
+    "ru": "сербский динар",
+    "country": "RS"
+  },
+  {
+    "code": "RUB",
+    "en": "Russian Ruble",
+    "ru": "российский рубль",
+    "country": "RU"
+  },
+  {
+    "code": "RWF",
+    "en": "Rwandan Franc",
+    "ru": "франк Руанды",
+    "country": "RW"
+  },
+  {
+    "code": "SAR",
+    "en": "Saudi Riyal",
+    "ru": "саудовский риял",
+    "country": "SA"
+  },
+  {
+    "code": "SBD",
+    "en": "Solomon Islands Dollar",
+    "ru": "доллар Соломоновых Островов",
+    "country": "SB"
+  },
+  {
+    "code": "SCR",
+    "en": "Seychellois Rupee",
+    "ru": "сейшельская рупия",
+    "country": "SC"
+  },
+  {
+    "code": "SDG",
+    "en": "Sudanese Pound",
+    "ru": "суданский фунт",
+    "country": "SD"
+  },
+  {
+    "code": "SEK",
+    "en": "Swedish Krona",
+    "ru": "шведская крона",
+    "country": "SE"
+  },
+  {
+    "code": "SGD",
+    "en": "Singapore Dollar",
+    "ru": "сингапурский доллар",
+    "country": "SG"
+  },
+  {
+    "code": "SHP",
+    "en": "St. Helena Pound",
+    "ru": "фунт острова Святой Елены",
+    "country": "SH"
+  },
+  {
+    "code": "SLE",
+    "en": "Sierra Leonean Leone",
+    "ru": "Леоне Сьерра-Леоне",
+    "country": "SL"
+  },
+  {
+    "code": "SLL",
+    "en": "Sierra Leonean Leone (1964—2022)",
+    "ru": "леоне",
+    "country": ""
+  },
+  {
+    "code": "SOS",
+    "en": "Somali Shilling",
+    "ru": "сомалийский шиллинг",
+    "country": "SO"
+  },
+  {
+    "code": "SRD",
+    "en": "Surinamese Dollar",
+    "ru": "суринамский доллар",
+    "country": "SR"
+  },
+  {
+    "code": "SSP",
+    "en": "South Sudanese Pound",
+    "ru": "южносуданский фунт",
+    "country": "SS"
+  },
+  {
+    "code": "STN",
+    "en": "São Tomé & Príncipe Dobra",
+    "ru": "добра Сан-Томе и Принсипи",
+    "country": "ST"
+  },
+  {
+    "code": "SYP",
+    "en": "Syrian Pound",
+    "ru": "сирийский фунт",
+    "country": "SY"
+  },
+  {
+    "code": "SZL",
+    "en": "Swazi Lilangeni",
+    "ru": "свазилендский лилангени",
+    "country": "SZ"
+  },
+  {
+    "code": "THB",
+    "en": "Thai Baht",
+    "ru": "таиландский бат",
+    "country": "TH"
+  },
+  {
+    "code": "TJS",
+    "en": "Tajikistani Somoni",
+    "ru": "таджикский сомони",
+    "country": "TJ"
+  },
+  {
+    "code": "TMT",
+    "en": "Turkmenistani Manat",
+    "ru": "новый туркменский манат",
+    "country": "TM"
+  },
+  {
+    "code": "TND",
+    "en": "Tunisian Dinar",
+    "ru": "тунисский динар",
+    "country": "TN"
+  },
+  {
+    "code": "TOP",
+    "en": "Tongan Paʻanga",
+    "ru": "тонганская паанга",
+    "country": "TO"
+  },
+  {
+    "code": "TRY",
+    "en": "Turkish Lira",
+    "ru": "турецкая лира",
+    "country": "TR"
+  },
+  {
+    "code": "TTD",
+    "en": "Trinidad & Tobago Dollar",
+    "ru": "доллар Тринидада и Тобаго",
+    "country": "TT"
+  },
+  {
+    "code": "TVD",
+    "en": "Tuvaluan dollar",
+    "ru": "Доллар Тувалу",
+    "country": "TV"
+  },
+  {
+    "code": "TWD",
+    "en": "New Taiwan Dollar",
+    "ru": "новый тайваньский доллар",
+    "country": "TW"
+  },
+  {
+    "code": "TZS",
+    "en": "Tanzanian Shilling",
+    "ru": "танзанийский шиллинг",
+    "country": "TZ"
+  },
+  {
+    "code": "UAH",
+    "en": "Ukrainian Hryvnia",
+    "ru": "украинская гривна",
+    "country": "UA"
+  },
+  {
+    "code": "UGX",
+    "en": "Ugandan Shilling",
+    "ru": "угандийский шиллинг",
+    "country": "UG"
+  },
+  {
+    "code": "USD",
+    "en": "US Dollar",
+    "ru": "доллар США",
+    "country": "US"
+  },
+  {
+    "code": "UYU",
+    "en": "Uruguayan Peso",
+    "ru": "уругвайский песо",
+    "country": "UY"
+  },
+  {
+    "code": "UZS",
+    "en": "Uzbekistani Som",
+    "ru": "узбекский сум",
+    "country": "UZ"
+  },
+  {
+    "code": "VES",
+    "en": "Venezuelan Bolívar",
+    "ru": "венесуэльский боливар",
+    "country": "VE"
+  },
+  {
+    "code": "VND",
+    "en": "Vietnamese Dong",
+    "ru": "вьетнамский донг",
+    "country": "VN"
+  },
+  {
+    "code": "VUV",
+    "en": "Vanuatu Vatu",
+    "ru": "вату Вануату",
+    "country": "VU"
+  },
+  {
+    "code": "WST",
+    "en": "Samoan Tala",
+    "ru": "самоанская тала",
+    "country": "WS"
+  },
+  {
+    "code": "XAF",
+    "en": "Central African CFA Franc",
+    "ru": "франк КФА BEAC",
+    "country": "CM"
+  },
+  {
+    "code": "XCD",
+    "en": "East Caribbean Dollar",
+    "ru": "восточно-карибский доллар",
+    "country": "AG"
+  },
+  {
+    "code": "XCG",
+    "en": "Caribbean guilder",
+    "ru": "Карибский гульден",
+    "country": "CW"
+  },
+  {
+    "code": "XDR",
+    "en": "Special Drawing Rights",
+    "ru": "СДР (специальные права заимствования)",
+    "country": ""
+  },
+  {
+    "code": "XOF",
+    "en": "West African CFA Franc",
+    "ru": "франк КФА ВСЕАО",
+    "country": "SN"
+  },
+  {
+    "code": "XPF",
+    "en": "CFP Franc",
+    "ru": "французский тихоокеанский франк",
+    "country": "PF"
+  },
+  {
+    "code": "YER",
+    "en": "Yemeni Rial",
+    "ru": "йеменский риал",
+    "country": "YE"
+  },
+  {
+    "code": "ZAR",
+    "en": "South African Rand",
+    "ru": "южноафриканский рэнд",
+    "country": "ZA"
+  },
+  {
+    "code": "ZMW",
+    "en": "Zambian Kwacha",
+    "ru": "замбийская квача",
+    "country": "ZM"
+  },
+  {
+    "code": "ZWG",
+    "en": "Zimbabwe Gold",
+    "ru": "Зимбабвийский золотой",
+    "country": "ZW"
+  },
+  {
+    "code": "ZWL",
+    "en": "Zimbabwean Dollar (2009)",
+    "ru": "Доллар Зимбабве (2009)",
+    "country": ""
+  }
+]

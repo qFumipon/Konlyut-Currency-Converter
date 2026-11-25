@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Konlyut: Currency Converter</string>
+    <string name="short_name">Konlyut</string>
+    <string name="convert_action">Convert</string>
+</resources>
