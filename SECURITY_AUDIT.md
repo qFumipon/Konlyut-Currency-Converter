@@ -5,7 +5,7 @@ Scope: local source tree before any GitHub publication. This is a source and aut
 ## Findings and controls
 
 - **Signing:** No private Release key or password is in source. Gradle reads temporary `KONLYUT_SIGNING_*` environment variables; Release packaging refuses to proceed without them. The owner created the permanent key at `D:\Android\Signing\konlyut-release.p12` through hidden local prompts. The existing Debug certificate cannot update to the new Release certificate.
-- **Update source:** `gradle.properties` configures `qFumipon/Konlyut-Currency-Converter`; Gradle validates the address and embeds it in the APK. No token is embedded. Automatic checks are limited to once per 24 hours after a successful check; manual mode starts no automatic check. GitHub's unauthenticated API cannot read a private repository's Releases, so real checks await an authorized public release.
+- **Update source:** `gradle.properties` configures `qFumipon/Konlyut-Currency-Converter`; Gradle validates the address and embeds it in the APK. No token is embedded. Automatic checks are limited to once per 24 hours after a successful check; manual mode starts no automatic check. The repository is public; real checks require a published stable release.
 - **Release selection:** The client uses GitHub's latest stable Release endpoint, rejects draft/prerelease JSON, requires a semantic tag and an exact `Konlyut-vVERSION.apk` asset. It rejects absent or malformed GitHub SHA-256 digests, unexpected paths, oversized metadata and APKs over 100 MB.
 - **Download:** HTTPS only, with redirects limited to GitHub and GitHubusercontent hosts. Downloads go to app-private cache, have size and SHA-256 checks, and leave no partial file after cancellation/failure. An APK with another package ID, a non-increasing `versionCode`, mismatched version name or different signer is rejected before the system installer.
 - **Installation:** Uses a narrow FileProvider cache path and a temporary read-only content URI. The user explicitly starts installation and confirms it in Android. Unknown-source permission is requested only at that point. No privileged or silent installation exists.
@@ -16,7 +16,7 @@ Scope: local source tree before any GitHub publication. This is a source and aut
 
 ## Remaining verification
 
-- The GitHub repository exists but remains private; public Releases do not exist. API interaction and full update installation cannot be verified against a live release.
+- The GitHub repository is public. Before the first release, the Release API and full update installation cannot be verified against a live release. A real update between two signed versions still requires a future device test.
 - The permanent key exists. A separate encrypted backup of the key and its password has not been verified. The Release APK has been rebuilt with the repository address and checked locally; publication remains pending.
 - A connected Android device is needed to test unknown-source permission, FileProvider handoff and an actual Release-to-Release update.
 - A Debug-signed APK cannot be upgraded in place to a Release APK signed with the permanent certificate. Regular upgrades between APKs signed with the same Release certificate preserve app-private data.

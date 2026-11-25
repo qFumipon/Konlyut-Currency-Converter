@@ -39,13 +39,13 @@ You can also convert amounts selected in other apps and customize the interface 
 
 ## Installation
 
-Konlyut requires Android 8.0 or newer. Once the first public version is released, its signed APK will appear in [GitHub Releases](https://github.com/qFumipon/Konlyut-Currency-Converter/releases). The repository is currently private, with no public release or working APK download link yet. A local Debug build appears at `app/build/outputs/apk/debug/app-debug.apk`.
+Konlyut requires Android 8.0 or newer. To install it, open [GitHub Releases](https://github.com/qFumipon/Konlyut-Currency-Converter/releases), download the APK from the latest stable release, and confirm installation on your device. A local Debug build appears at `app/build/outputs/apk/debug/app-debug.apk`.
 
 ## Updates
 
 The app is configured for `qFumipon/Konlyut-Currency-Converter`. In Settings, choose an automatic check when the app opens (no more than once every 24 hours) or checks only when you tap the button. Android always asks you to confirm installation.
 
-While the repository is private, the app cannot read its releases through GitHub's public API without a token. No token is built into the app. Checks can work after the repository becomes public and the first release is published; an actual update installation still needs testing on a phone. See the [release guide](docs/RELEASING.md).
+Update checks use public stable GitHub Releases; no token is built into the app. Installing an actual update between two versions still needs testing on a phone. See the [release guide](docs/RELEASING.md).
 
 ## Build from source
 
