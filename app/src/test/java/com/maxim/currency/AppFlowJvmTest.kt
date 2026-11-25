@@ -83,20 +83,22 @@ class AppFlowJvmTest {
             compose.onNodeWithText("About").performScrollTo().assertExists()
             compose.onNodeWithText("Version ${BuildConfig.VERSION_NAME}").assertExists()
             compose.onNodeWithText("No ads, accounts or analytics.",substring=true).assertDoesNotExist()
+            compose.onNodeWithText("Transfer settings").assertDoesNotExist()
             compose.onNodeWithText("Русский").performScrollTo().performClick()
             compose.waitUntil(20000) {compose.onAllNodesWithText("О приложении").fetchSemanticsNodes().isNotEmpty()}
             compose.onNodeWithText("О приложении").performScrollTo().assertExists()
             compose.onNodeWithText("Версия ${BuildConfig.VERSION_NAME}").assertExists()
             compose.onNodeWithText("Без рекламы, регистрации и аналитики.",substring=true).assertDoesNotExist()
+            compose.onNodeWithText("Перенос настроек").assertDoesNotExist()
         }
     }
-    @Test fun manualUpdateModePersistsAndUnconfiguredCheckExplainsItself() {
+    @Test fun manualUpdateModePersistsAndOfflineCheckExplainsItself() {
         ActivityScenario.launch(MainActivity::class.java).use {scenario ->
             waitHome();compose.onNodeWithTag("nav_settings").performClick()
             compose.onNodeWithText("Manual",substring=false).performScrollTo().performClick()
             runBlocking {withTimeout(15000) {app.graph.store.settings.first {it.updateMode=="manual"}}}
             compose.onNodeWithTag("check_updates").performScrollTo().performClick()
-            compose.onNodeWithText("The update repository is not configured yet").performScrollTo().assertExists()
+            compose.onNodeWithText("No internet connection").performScrollTo().assertExists()
             scenario.recreate()
             compose.waitUntil(20000) {compose.onAllNodesWithText("About").fetchSemanticsNodes().isNotEmpty()}
             assertEquals("manual",runBlocking {app.graph.store.settings.first()}.updateMode)

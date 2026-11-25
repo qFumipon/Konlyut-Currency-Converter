@@ -15,7 +15,7 @@ Android instrumented tests need a connected device or emulator. `assembleDebugAn
 
 ## Update configuration
 
-Set `-Pkonlyut.updateRepository=OWNER/Konlyut-Currency-Converter` on the build command after the public owner is known. Do not substitute an invented owner. The property is validated and embedded as a public repository address; it is not a secret. Without it, update checks are disabled and the manual action explains why.
+`gradle.properties` sets `konlyut.updateRepository=qFumipon/Konlyut-Currency-Converter`. Gradle validates and embeds this public repository address; it is not a credential. While the repository is private, unauthenticated GitHub Release checks cannot access it. Do not put a GitHub token in the Android app. Override the property only when building for a different, explicitly approved repository.
 
 The update protocol is implemented in `data/GitHubUpdates.kt`. Unit tests use synthetic GitHub JSON and local HTTP interceptors; no real release or app installation is part of automated tests.
 

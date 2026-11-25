@@ -5,8 +5,6 @@ import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import androidx.activity.compose.BackHandler
-import androidx.activity.compose.rememberLauncherForActivityResult
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.*
 import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.gestures.detectDragGesturesAfterLongPress
@@ -41,8 +39,6 @@ import com.maxim.currency.*
 import com.maxim.currency.data.*
 import com.maxim.currency.domain.*
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
 import java.math.BigDecimal
 import java.time.Instant
 import java.time.ZoneId
@@ -293,27 +289,6 @@ fun SettingsScreen(vm: ConverterViewModel, settings: UserSettings, state: RateSt
     val context=LocalContext.current
     val updateState by vm.updateState.collectAsStateWithLifecycle()
     var installPermissionHint by remember {mutableStateOf(false)}
-    val scope=rememberCoroutineScope()
-    var backupCandidate by remember {mutableStateOf<UserSettings?>(null)}
-    var backupError by remember {mutableStateOf(false)}
-    var backupSaved by remember {mutableStateOf(false)}
-    val exportBackup=rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument(SettingsBackup.MIME)) {uri ->
-        if(uri!=null) scope.launch {
-            backupSaved=withContext(Dispatchers.IO) {runCatching {
-                context.contentResolver.openOutputStream(uri)?.use {it.write(SettingsBackup.encode(settings).toByteArray(Charsets.UTF_8))}
-                    ?: error("Could not open backup")
-            }.isSuccess}
-            backupError=!backupSaved
-        }
-    }
-    val importBackup=rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) {uri ->
-        if(uri!=null) scope.launch {
-            backupCandidate=withContext(Dispatchers.IO) {runCatching {
-                context.contentResolver.openInputStream(uri)?.use {SettingsBackup.decode(it)} ?: error("Could not open backup")
-            }.getOrNull()}
-            backupError=backupCandidate==null
-        }
-    }
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp),verticalArrangement=Arrangement.spacedBy(8.dp)) {
         Heading(tr("Настройки","Settings"))
         Action(tr("Мои валюты","My currencies"),currencies,Modifier.fillMaxWidth().testTag("nav_currencies"))
@@ -403,20 +378,7 @@ fun SettingsScreen(vm: ConverterViewModel, settings: UserSettings, state: RateSt
                 UpdateUiState.Reason.NETWORK -> tr("Не удалось проверить или скачать обновление","Could not check or download the update")
             },color=p[ColorRole.ERROR_TEXT])
         }
-        Text(tr("Перенос настроек","Transfer settings"),style=MaterialTheme.typography.titleMedium)
-        Row(horizontalArrangement=Arrangement.spacedBy(8.dp)) {
-            Action(tr("Сохранить настройки","Export settings"),{exportBackup.launch(SettingsBackup.FILE_NAME)},Modifier.weight(1f),secondary=true)
-            Action(tr("Загрузить настройки","Import settings"),{importBackup.launch(arrayOf(SettingsBackup.MIME))},Modifier.weight(1f),secondary=true)
-        }
-        if(backupSaved) Text(tr("Настройки сохранены в файл","Settings saved to file"),color=p[ColorRole.INFO_TEXT])
-        if(backupError) Text(tr("Не удалось прочитать или сохранить файл настроек","Could not read or save the settings file"),color=p[ColorRole.ERROR_TEXT])
     }
-    backupCandidate?.let {candidate -> AlertDialog(onDismissRequest={backupCandidate=null},containerColor=p[ColorRole.DIALOG],
-        title={Text(tr("Загрузить настройки?","Import settings?"))},
-        text={Text(tr("Текущие настройки будут заменены. Валют: ","Current settings will be replaced. Currencies: ")+candidate.selected.size+
-            tr(", пользовательских тем: ",", custom themes: ")+candidate.presets.count {it.id!="default"})},
-        confirmButton={TextButton({vm.edit {candidate};backupCandidate=null}) {Text(tr("Загрузить","Import"))}},
-        dismissButton={TextButton({backupCandidate=null}) {Text(tr("Отмена","Cancel"))}}) }
 }
 
 @Composable

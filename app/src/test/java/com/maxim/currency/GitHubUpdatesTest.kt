@@ -6,11 +6,8 @@ import com.maxim.currency.data.ReleaseCodec
 import com.maxim.currency.data.UpdateInstaller
 import com.maxim.currency.data.UpdateRelease
 import com.maxim.currency.data.SettingsCodec
-import com.maxim.currency.data.SettingsBackup
 import com.maxim.currency.data.UpdateCheckPolicy
 import com.maxim.currency.data.DownloadIntegrityException
-import com.maxim.currency.domain.UserSettings
-import com.maxim.currency.domain.ThemePreset
 import kotlinx.coroutines.runBlocking
 import okhttp3.OkHttpClient
 import okhttp3.Protocol
@@ -29,11 +26,25 @@ import java.security.MessageDigest
 class GitHubUpdatesTest {
     private val repo="owner/Konlyut-Currency-Converter"
     private fun payload(version: String="1.0.1",digest: String="sha256:"+"a".repeat(64),
-        name: String="Konlyut-v$version.apk",prerelease: Boolean=false): String = """
+        name: String="Konlyut-v$version.apk",prerelease: Boolean=false,
+        repository: String=repo): String = """
         {"tag_name":"v$version","draft":false,"prerelease":$prerelease,"body":"Fixes",
          "assets":[{"name":"$name","state":"uploaded","size":4,"digest":"$digest",
-         "browser_download_url":"https://github.com/$repo/releases/download/v$version/$name"}]}
+         "browser_download_url":"https://github.com/$repository/releases/download/v$version/$name"}]}
     """.trimIndent()
+    @Test fun configuredRepositoryTargetsTheExpectedGitHubApi() = runBlocking {
+        val repository="qFumipon/Konlyut-Currency-Converter"
+        assertEquals(repository,BuildConfig.UPDATE_REPOSITORY)
+        var requested=""
+        val client=OkHttpClient.Builder().addInterceptor {chain ->
+            requested=chain.request().url.toString()
+            Response.Builder().request(chain.request()).protocol(Protocol.HTTP_1_1).code(200)
+                .message("OK").body(payload(repository=repository).toResponseBody()).build()
+        }.build()
+        val context=ApplicationProvider.getApplicationContext<android.content.Context>()
+        assertEquals("1.0.1",GitHubUpdates(context,BuildConfig.UPDATE_REPOSITORY,client).latest().version)
+        assertEquals("https://api.github.com/repos/$repository/releases/latest",requested)
+    }
     @Test fun semanticVersionsCompareNumerically() {
         assertTrue(ReleaseCodec.compare("1.0.10","1.0.9")>0)
         assertTrue(ReleaseCodec.compare("1.1.0","1.0.99")>0)
@@ -55,16 +66,6 @@ class GitHubUpdatesTest {
         assertEquals(manual,SettingsCodec.decode(SettingsCodec.encode(manual)))
         assertEquals(listOf("EUR","USD"),manual.selected)
         assertEquals("12.5",manual.amount)
-    }
-    @Test fun settingsBackupRestoresThemesCurrenciesAndUpdateMode() {
-        val saved=UserSettings(selected=listOf("RUB","USD"),active="RUB",amount="53.25",
-            presets=listOf(ThemePreset(),ThemePreset(id="custom",name="Ocean",light=mapOf("MAIN" to "123456"))),
-            presetId="custom",updateMode="manual",lastUpdateCheck=123L)
-        val restored=SettingsBackup.decode(SettingsBackup.encode(saved).byteInputStream())
-        assertEquals(saved.copy(lastUpdateCheck=0),restored)
-        assertThrows(IllegalArgumentException::class.java) {
-            SettingsBackup.decode(ByteArray(1_000_001).inputStream())
-        }
     }
     @Test fun stableReleaseRequiresExpectedApkAndDigest() {
         val release=ReleaseCodec.parse(payload(),repo)
